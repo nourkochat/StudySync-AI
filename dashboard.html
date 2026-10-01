@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nour Kochat">
+    <meta name="description" content="Tableau de bord - StudySync AI">
+    <title>StudySync AI - Tableau de bord</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-dashboard">
+
+    <header>
+      <nav>
+        <div class="logo">
+          <span class="logo-icon">⬡</span>
+          <strong>StudySync <mark>AI</mark></strong>
+        </div>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="chatbot.html">Chatbot AI</a></li>
+          <li><a href="connexion.html" class="bouton-nav">Déconnexion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="dashboard-main">
+
+      <!-- Barre latérale -->
+      <aside class="sidebar">
+        <div class="profil-sidebar">
+          <div class="avatar-profil">NK</div>
+          <h3>Nour Kochat</h3>
+          <p>Licence 2 &bull; Informatique</p>
+        </div>
+        <nav class="nav-sidebar">
+          <ul>
+            <li><a href="#mon-groupe" class="actif">👥 Mon groupe</a></li>
+            <li><a href="#membres">👤 Membres</a></li>
+            <li><a href="#messages">💬 Messages</a></li>
+            <li><a href="chatbot.html">🤖 Chatbot AI</a></li>
+          </ul>
+        </nav>
+        <div class="matieres-sidebar">
+          <h4>Mes matières</h4>
+          <ul>
+            <li><mark>💻 Informatique</mark></li>
+            <li><mark>📐 Mathématiques</mark></li>
+            <li><mark>⚛️ Physique</mark></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Contenu principal du dashboard -->
+      <div class="dashboard-contenu">
+
+        <!-- Section Mon groupe -->
+        <section id="mon-groupe">
+          <header class="section-entete">
+            <h2>Mon groupe d'étude</h2>
+            <p>Groupe formé automatiquement par <strong>StudySync AI</strong> selon vos profils.</p>
+          </header>
+
+          <div class="carte-groupe">
+            <div class="groupe-info">
+              <h3>Groupe Algo &amp; Maths &mdash; 2024</h3>
+              <p>4 membres &bull; Créé le 15 septembre 2024</p>
+              <div class="tags-matieres">
+                <span class="tag">💻 Informatique</span>
+                <span class="tag">📐 Mathématiques</span>
+                <span class="tag">⚛️ Physique</span>
+              </div>
+            </div>
+            <div class="compatibilite">
+              <div class="score-cercle">
+                <strong>92%</strong>
+                <span>Compatibilité</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr>
+
+        <!-- Section Membres -->
+        <section id="membres">
+          <h2>Membres du groupe</h2>
+
+          <div class="grille-membres">
+
+            <article class="carte-membre actif-membre">
+              <div class="membre-avatar">NK</div>
+              <div class="membre-info">
+                <h3>Nour Kochat <small>(Vous)</small></h3>
+                <p>Licence 2 &bull; Informatique, Maths</p>
+                <p class="disponibilite">🟢 Disponible &bull; Lundi &amp; Mercredi soir</p>
+              </div>
+            </article>
+
+            <article class="carte-membre">
+              <div class="membre-avatar">AS</div>
+              <div class="membre-info">
+                <h3>Amine Sellami</h3>
+                <p>Licence 2 &bull; Informatique, Physique</p>
+                <p class="disponibilite">🟢 Disponible &bull; Mardi &amp; Jeudi matin</p>
+              </div>
+            </article>
+
+            <article class="carte-membre">
+              <div class="membre-avatar">LB</div>
+              <div class="membre-info">
+                <h3>Lina Ben Ali</h3>
+                <p>Licence 2 &bull; Maths, Physique</p>
+                <p class="disponibilite">🟡 Partiellement disponible &bull; Week-end</p>
+              </div>
+            </article>
+
+            <article class="carte-membre">
+              <div class="membre-avatar">KM</div>
+              <div class="membre-info">
+                <h3>Karim Mansouri</h3>
+                <p>Licence 2 &bull; Informatique, Maths</p>
+                <p class="disponibilite">🔴 Occupé cette semaine</p>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <hr>
+
+        <!-- Section Messages -->
+        <section id="messages">
+          <h2>Messages du groupe</h2>
+
+          <div class="chat-groupe">
+
+            <div class="historique-messages" id="historique">
+
+              <div class="message message-autre">
+                <div class="msg-avatar">AS</div>
+                <div class="msg-contenu">
+                  <strong>Amine Sellami</strong>
+                  <p>Salut tout le monde ! On se retrouve mercredi soir pour réviser les algorithmes de tri ?</p>
+                  <small>Lundi 14:32</small>
+                </div>
+              </div>
+
+              <div class="message message-autre">
+                <div class="msg-avatar">LB</div>
+                <div class="msg-contenu">
+                  <strong>Lina Ben Ali</strong>
+                  <p>Bonne idée ! Je prépare des exercices sur les arbres binaires aussi.</p>
+                  <small>Lundi 15:10</small>
+                </div>
+              </div>
+
+              <div class="message message-moi">
+                <div class="msg-contenu">
+                  <strong>Vous</strong>
+                  <p>Super, je serai là ! J'ai des questions sur la complexité temporelle.</p>
+                  <small>Lundi 15:45</small>
+                </div>
+                <div class="msg-avatar moi">NK</div>
+              </div>
+
+            </div>
+
+            <!-- Zone de saisie du message -->
+            <div class="zone-message">
+              <input type="text" id="saisie-message"
+                     placeholder="Écrire un message au groupe...">
+              <button type="button" id="btn-envoyer" class="bouton-principal">
+                Envoyer &#10148;
+              </button>
+            </div>
+
+          </div>
+        </section>
+
+        <hr>
+
+        <!-- Accès rapide chatbot -->
+        <section id="acces-chatbot">
+          <div class="carte-chatbot">
+            <div class="chatbot-texte">
+              <h2>🤖 Chatbot AI disponible</h2>
+              <p>
+                Posez vos questions sur <strong>n'importe quelle matière</strong>.
+                Notre chatbot explique les concepts, propose des exercices
+                et donne des conseils d'étude personnalisés.
+              </p>
+              <a href="chatbot.html" class="bouton-principal">Ouvrir le Chatbot &rarr;</a>
+            </div>
+            <div class="chatbot-visuel">
+              <div class="robot-icone">🤖</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <!-- fin dashboard-contenu -->
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 <strong>StudySync AI</strong> &mdash; Projet réalisé par <em>Nour Kochat</em></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

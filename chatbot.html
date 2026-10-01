@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nour Kochat">
+    <meta name="description" content="Chatbot AI - Posez vos questions sur vos matières">
+    <title>StudySync AI - Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-chatbot">
+
+    <header>
+      <nav>
+        <div class="logo">
+          <span class="logo-icon">⬡</span>
+          <strong>StudySync <mark>AI</mark></strong>
+        </div>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="chatbot.html">Chatbot AI</a></li>
+          <li><a href="connexion.html" class="bouton-nav">Déconnexion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="chatbot-main">
+
+      <!-- Panneau gauche : options du chatbot -->
+      <aside class="chatbot-sidebar">
+        <h2>🤖 Assistant AI</h2>
+        <p>Je suis votre assistant d'étude personnel. Posez-moi n'importe quelle question !</p>
+
+        <nav>
+          <h3>Suggestions rapides</h3>
+          <ul class="suggestions">
+            <li>
+              <button type="button" class="suggestion-btn" data-msg="Explique-moi les algorithmes de tri">
+                📐 Expliquer les tris
+              </button>
+            </li>
+            <li>
+              <button type="button" class="suggestion-btn" data-msg="Propose-moi un exercice de maths">
+                🧮 Exercice de maths
+              </button>
+            </li>
+            <li>
+              <button type="button" class="suggestion-btn" data-msg="Donne-moi des conseils pour mieux mémoriser">
+                🧠 Conseils mémorisation
+              </button>
+            </li>
+            <li>
+              <button type="button" class="suggestion-btn" data-msg="Comment organiser mes révisions ?">
+                📅 Organiser mes révisions
+              </button>
+            </li>
+            <li>
+              <button type="button" class="suggestion-btn" data-msg="Explique-moi la complexité algorithmique">
+                💡 Complexité algorithmique
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="chatbot-matieres">
+          <h3>Matières disponibles</h3>
+          <ul>
+            <li>💻 Informatique</li>
+            <li>📐 Mathématiques</li>
+            <li>⚛️ Physique</li>
+            <li>🧪 Chimie</li>
+            <li>📈 Économie</li>
+            <li>🌍 Langues</li>
+          </ul>
+        </div>
+
+        <button type="button" class="bouton-secondaire" id="btn-effacer">
+          🗑️ Effacer la conversation
+        </button>
+      </aside>
+
+      <!-- Zone de chat principale -->
+      <div class="chatbot-zone">
+
+        <div class="chatbot-entete">
+          <div class="robot-badge">🤖</div>
+          <div>
+            <h1>StudySync <em>AI</em></h1>
+            <p>Assistant d'étude intelligent &bull; <span id="statut-bot">En ligne</span></p>
+          </div>
+        </div>
+
+        <!-- Historique de la conversation -->
+        <div class="conversation" id="conversation">
+
+          <!-- Message de bienvenue du bot -->
+          <div class="message-bot">
+            <div class="bot-avatar">🤖</div>
+            <div class="bulle-bot">
+              <p>
+                Bonjour <strong>Nour</strong> ! 👋 Je suis votre assistant d'étude AI.
+              </p>
+              <p>
+                Je peux vous aider à :
+              </p>
+              <ul>
+                <li>Répondre à vos questions sur vos matières</li>
+                <li>Donner des explications simples et claires</li>
+                <li>Proposer des exercices adaptés à votre niveau</li>
+                <li>Donner des conseils d'étude efficaces</li>
+              </ul>
+              <p>Par quoi voulez-vous commencer ? 😊</p>
+              <small>Maintenant</small>
+            </div>
+          </div>
+
+        </div>
+        <!-- fin conversation -->
+
+        <!-- Indicateur "en train d'écrire" (caché par défaut) -->
+        <div class="bot-typing" id="bot-typing">
+          <div class="bot-avatar">🤖</div>
+          <div class="bulle-typing">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Zone de saisie -->
+        <div class="chatbot-saisie">
+          <input type="text" id="input-chatbot"
+                 placeholder="Posez votre question ici... (Ex: Explique-moi les dérivées)">
+          <button type="button" id="btn-envoyer-bot" class="bouton-principal">
+            &#10148;
+          </button>
+        </div>
+
+      </div>
+      <!-- fin chatbot-zone -->
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 <strong>StudySync AI</strong> &mdash; Projet réalisé par <em>Nour Kochat</em></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
